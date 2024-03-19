@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.movieapp.screens.NotificationScreen
 import com.example.movieapp.screens.details.DetailsScreen
 import com.example.movieapp.screens.home.HomeScreen
 
@@ -26,6 +27,10 @@ fun MovieNavigation() {
                 navController = navController,
                 movieId = backStackEntry.arguments?.getString("movie")
             )
+        }
+
+        composable(MovieScreens.NotificationScreen.name) {
+            NotificationScreen(navController = navController)
         }
     }
 }

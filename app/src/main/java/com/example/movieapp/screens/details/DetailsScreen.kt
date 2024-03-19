@@ -71,7 +71,7 @@ fun DetailsScreen(modifier: Modifier = Modifier, navController: NavController, m
                     Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "Arrow Back",
                         tint = MaterialTheme.colorScheme.onBackground,
                         modifier = Modifier.clickable {
-                            navController.popBackStack()
+                            navController.navigateUp()
                         }
                     )
                 }
